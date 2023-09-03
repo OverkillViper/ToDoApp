@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    @font-face {font-family: "CriqueGrotesk-Black";  src: url("/assets/fonts/CriqueGrotesk-Black.ttf"); }
+    @font-face {font-family: "CriqueGrotesk-Bold";   src: url("/assets/fonts/CriqueGrotesk-Bold.ttf"); }
+    @font-face {font-family: "CriqueGrotesk-Medium"; src: url("/assets/fonts/CriqueGrotesk-Medium.ttf"); }
+    @font-face {font-family: "CriqueGrotesk";        src: url("/assets/fonts/CriqueGrotesk.ttf"); }
+}
