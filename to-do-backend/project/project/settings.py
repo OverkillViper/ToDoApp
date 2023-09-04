@@ -10,9 +10,11 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
+import dj_database_url
 from pathlib import Path
 from datetime import timedelta
 import os
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -24,7 +26,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = "django-insecure-ubd(*mxu)^ubzgzsnxp64v5%)nj5%hr!&jd90s(o1p3p^cqf4-"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['127.0.0.1', '192.168.0.9']
 
@@ -109,6 +111,8 @@ DATABASES = {
         "NAME": BASE_DIR / "db.sqlite3",
     }
 }
+
+DATABASES["default"] = dj_database_url.parse("postgres://todoapp_postgresql_user:s0fmDs80nVQI31AKsvKj0L0o6L5xbZcW@dpg-cjr18mm1208c738e3ba0-a.singapore-postgres.render.com/todoapp_postgresql")
 
 AUTH_USER_MODEL = "accounts.User"
 

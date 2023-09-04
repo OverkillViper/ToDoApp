@@ -20,6 +20,7 @@ from django.conf.urls.static import static
 from taskManager.views import *
 from rest_framework import routers
 from django.conf import settings
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 router = routers.DefaultRouter()
 
@@ -29,3 +30,5 @@ urlpatterns = [
     path('', include(router.urls)),
     path("admin/", admin.site.urls),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+urlpatterns += staticfiles_urlpatterns()
