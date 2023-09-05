@@ -21,6 +21,8 @@ from taskManager.views import *
 from rest_framework import routers
 from django.conf import settings
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
+from django.urls import re_path
+from django.views.static import serve
 
 router = routers.DefaultRouter()
 
@@ -29,6 +31,7 @@ urlpatterns = [
     path('api/task-manager/', include('taskManager.urls')),
     path('', include(router.urls)),
     path("admin/", admin.site.urls),
+    re_path(r'^media/(?P<path>.*)$', serve, {'document_root': settings.MEDIA_ROOT}),
 ]
 
 urlpatterns += staticfiles_urlpatterns()
