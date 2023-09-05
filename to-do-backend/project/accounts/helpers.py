@@ -3,7 +3,7 @@ from django.conf import settings
 
 def send_password_reset_mail(email, token):
     subject = "ToDoApp | Reset you account password"
-    message = f'Hello,\n\nPlease click on the following link to reset your password:\nPassword Reset Link: http://192.168.0.9:5173/reset-password/?token={token}'
+    message = f'Hello,\n\nPlease click on the following link to reset your password:\nPassword Reset Link: http://todoapp-infx.onrender.com/reset-password/?token={token}'
     email_from = settings.EMAIL_HOST_USER
     recipient_list = [email]
     send_mail(subject, message, email_from, recipient_list)

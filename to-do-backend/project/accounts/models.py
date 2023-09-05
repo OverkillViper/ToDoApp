@@ -27,7 +27,7 @@ class User(AbstractBaseUser, PermissionsMixin):
 
     def get_avatar(self):
         if self.avatar:
-            return'http://192.168.0.9:8000' + self.avatar.url
+            return'http://todoapp-infx.onrender.com' + self.avatar.url
         else:
             return 'https://picsum.photos/200/200'
         
