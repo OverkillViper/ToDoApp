@@ -5,7 +5,7 @@ import App from './App.vue'
 import router from './router'
 import axios from 'axios'
 
-axios.defaults.baseURL = 'http://192.168.0.9:8000'
+axios.defaults.baseURL = 'https://todoapp-infx.onrender.com'
 
 const app = createApp(App)
 

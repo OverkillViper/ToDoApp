@@ -28,7 +28,7 @@ SECRET_KEY = "django-insecure-ubd(*mxu)^ubzgzsnxp64v5%)nj5%hr!&jd90s(o1p3p^cqf4-
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['todoapp-infx.onrender.com']
+ALLOWED_HOSTS = ['todoapp-infx.onrender.com', '192.168.0.9']
 
 CORS_ALLOW_ALL_ORIGINS = True
 CORS_ALLOW_METHODS = ( 'GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS' )
@@ -151,11 +151,11 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = "static/"
-STATIC_ROOT = "static/"
+STATIC_ROOT = BASE_DIR / 'productionfiles'
 
-# STATICFILES_DIRS = [
-#     BASE_DIR / "static",
-# ]
+STATICFILES_DIRS = [
+    BASE_DIR / "static",
+]
 
 MEDIA_URL = 'media/'
 MEDIA_ROOT = BASE_DIR / 'media'
