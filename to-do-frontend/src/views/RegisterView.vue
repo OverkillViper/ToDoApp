@@ -95,7 +95,9 @@ export default {
                             this.form.password2 = ''
                         } else {
                             this.toastStore.showToast(5000, 'Something went wrong. Please try again', 'error')
-                            this.errors.push(response.data.error)
+                            for(let i = 0; i < response.data.error.password2.length; i++) {
+                                this.errors.push(response.data.error.password2[i])
+                            }
                         }
                     })
                     .catch(error => {
