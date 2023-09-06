@@ -16,7 +16,10 @@
                 </div>
                 <div class="mt-3">
                     <div class="font-primary text-white mb-2">Task Group</div>
-                    <select name="group_id" id="group_id" v-model="groupID" class="bg-secondary2 p-4 font-primary w-full">
+                    <div class="font-primary text-white" v-if="groups.length == 0">
+                        Create a group first
+                    </div>
+                    <select name="group_id" id="group_id" v-model="groupID" class="bg-secondary2 p-4 font-primary w-full" v-else>
                         <option class="font-primary" v-for="group in groups" :key="group.id" :value="group.id" :selected="task.group.id === group.id">{{ group.name }}</option>
                     </select>
                 </div>
