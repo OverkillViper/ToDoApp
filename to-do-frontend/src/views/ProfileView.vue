@@ -182,7 +182,7 @@
 <template>
     <div class="mx-auto mt-10 w-full md:w-3/4 2xl:w-2/3 px-10">
         <!-- Avatar modal -->
-        <div class="fixed top-0 bottom-0 left-0 right-0 bg-primary  flex justify-center content-center" v-if="isAvatarModalOpen">
+        <!-- <div class="fixed top-0 bottom-0 left-0 right-0 bg-primary  flex justify-center content-center" v-if="isAvatarModalOpen">
             <div class="bg-secondary shadow-2xl rounded-2xl p-10 text-white w-4/5 md:w-2/5 m-auto z-40 ">
                 <div class="flex flex-row justify-between content-center">
                     <div class="font-primary text-2xl mb-4 flex content-center">Change Avatar</div>
@@ -218,7 +218,7 @@
 
                 
             </div>
-        </div>
+        </div> -->
 
         <!-- Delete modal -->
         <div class="fixed top-0 bottom-0 left-0 right-0 bg-primary  flex justify-center content-center" v-if="isDeleteModalOpen">
@@ -253,7 +253,7 @@
         <!-- Main content -->
         <div class="grid grid-cols-1 md:grid-cols-3 md:gap-6">
             <div class="col-span-1">
-                <div class="flex justify-center">
+                <!-- <div class="flex justify-center">
                     <div class="rounded-full" style="overflow: hidden;">
                         <img :src="userStore.user.avatar" alt="user_dp" class="w-32 p-0 m-0 aspect-square object-cover">
                     </div>
@@ -262,7 +262,7 @@
                     <div class="rounded-full py-2 px-4 bg-secondary2 text-sm text-ternary flex mt-5 font-normal" @click="openAvatarModal">
                         <span class="material-icons text-sm mr-3">edit</span>Change photo
                     </div>
-                </div>
+                </div> -->
                 <div class="text-sm font-normal text-ternary mt-6 ext-left">Welcome</div>
                 <form action="" v-on:submit.prevent="changeUsername" v-if="showUsernameEdit" class="grid grid-cols-4">
                     <div class="col-span-3">

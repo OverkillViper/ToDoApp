@@ -16,9 +16,9 @@
                 <router-link to="/tasks" class="text-gray-300 flex items-center"><span class="material-icons">dashboard</span></router-link>
             </span>
             <RouterLink to="/profile" v-if="userStore.user.isAuthenticated" class="mr-2 md:mr-4 font-primary text-white hidden md:block">{{ userStore.user.name }}</RouterLink>
-            <RouterLink to="/profile" class="rounded-full bg-white flex flex-row justify-end content-center" style="overflow: hidden;" v-if="userStore.user.isAuthenticated">
+            <!-- <RouterLink to="/profile" class="rounded-full bg-white flex flex-row justify-end content-center" style="overflow: hidden;" v-if="userStore.user.isAuthenticated">
                 <img :src="userStore.user.avatar" alt="user_dp" class="w-10 p-0 m-0 aspect-square object-cover">
-            </RouterLink>
+            </RouterLink> -->
             <div class="rounded-full flex flex-row justify-end content-center text-white" style="overflow: hidden;" v-else>
                 <RouterLink to="/login" class="material-icons text-white mx-2">login</RouterLink>
                 <RouterLink to="/register" class="material-icons text-white mx-2">app_registration</RouterLink>
