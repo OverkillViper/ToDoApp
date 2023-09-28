@@ -28,7 +28,7 @@ SECRET_KEY = "django-insecure-ubd(*mxu)^ubzgzsnxp64v5%)nj5%hr!&jd90s(o1p3p^cqf4-
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['todoapp-infx.onrender.com', '192.168.0.9']
+ALLOWED_HOSTS = ['todoapp-infx.onrender.com', '192.168.0.9', '.vercel.app']
 
 CORS_ALLOW_ALL_ORIGINS = True
 CORS_ALLOW_METHODS = ( 'GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS' )
